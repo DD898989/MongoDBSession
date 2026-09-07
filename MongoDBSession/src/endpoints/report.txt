@@ -1,0 +1,200 @@
+
+───────────────────────────────────────────────────────────────────────────────── scenario stats ──────────────────────────────────────────────────────────────────────────────────
+
+scenario: jwt_auth_scenario
+  - ok count: 132047
+  - fail count: 0
+  - all data: 0 MB
+  - duration: 00:02:00
+
+load simulations:
+  - ramping_constant, copies: 1000, during: 00:01:00
+  - keep_constant, copies: 1000, during: 00:01:00
+
+┌────────────────────┬─────────────────────────────────────────────────────────────┐
+│               step │ ok stats                                                    │
+├────────────────────┼─────────────────────────────────────────────────────────────┤
+│               name │ global information                                          │
+│      request count │ all = 132047, ok = 132047, RPS = 1100.4                     │
+│            latency │ min = 1.04, mean = 680.16, max = 5935.46, StdDev = 538.17   │
+│ latency percentile │ p50 = 734.21, p75 = 782.34, p95 = 1059.84, p99 = 3280.9     │
+│                    │                                                             │
+│               name │ jwt_login                                                   │
+│      request count │ all = 7069, ok = 7069, RPS = 58.9                           │
+│            latency │ min = 29.68, mean = 1660.28, max = 5054.87, StdDev = 807.57 │
+│ latency percentile │ p50 = 1776.64, p75 = 2330.62, p95 = 2560, p99 = 2830.34     │
+│                    │                                                             │
+│               name │ jwt_profile                                                 │
+│      request count │ all = 132047, ok = 132047, RPS = 1100.4                     │
+│            latency │ min = 1.03, mean = 591.45, max = 2463.46, StdDev = 271.07   │
+│ latency percentile │ p50 = 723.97, p75 = 779.78, p95 = 894.98, p99 = 1077.25     │
+└────────────────────┴─────────────────────────────────────────────────────────────┘
+
+status codes for scenario: jwt_auth_scenario
+┌────────────────┬────────┬─────────┐
+│    status code │ count  │ message │
+├────────────────┼────────┼─────────┤
+│ ok (no status) │ 132047 │         │
+│            200 │ 139116 │         │
+└────────────────┴────────┴─────────┘
+CPU
+webapi-1
+2639d59e69ac
+mongodbsession-webapi
+Running
+100.93%
+8080:8080⁠
+2 minutes ago
+
+
+
+───────────────────────────────────────────────────────────────────────────────── scenario stats ──────────────────────────────────────────────────────────────────────────────────
+
+    ////////////////REMOVE CODE:
+    //const decoded = jwt.verify(token, Const.JWT.SecretKey, {
+    //    issuer: Const.JWT.Issuer,
+    //    audience: Const.JWT.Audience
+    //});
+scenario: jwt_auth_scenario
+  - ok count: 505453
+  - fail count: 0
+  - all data: 0 MB
+  - duration: 00:02:00
+
+load simulations:
+  - ramping_constant, copies: 1000, during: 00:01:00
+  - keep_constant, copies: 1000, during: 00:01:00
+
+┌────────────────────┬───────────────────────────────────────────────────────────┐
+│               step │ ok stats                                                  │
+├────────────────────┼───────────────────────────────────────────────────────────┤
+│               name │ global information                                        │
+│      request count │ all = 505453, ok = 505453, RPS = 4212.1                   │
+│            latency │ min = 0.17, mean = 177.55, max = 1725.58, StdDev = 150.05 │
+│ latency percentile │ p50 = 166.66, p75 = 209.02, p95 = 362.5, p99 = 885.76     │
+│                    │                                                           │
+│               name │ jwt_login                                                 │
+│      request count │ all = 25839, ok = 25839, RPS = 215.3                      │
+│            latency │ min = 5.26, mean = 444.92, max = 1491.85, StdDev = 220.65 │
+│ latency percentile │ p50 = 508.16, p75 = 594.94, p95 = 775.68, p99 = 912.38    │
+│                    │                                                           │
+│               name │ jwt_profile                                               │
+│      request count │ all = 505453, ok = 505453, RPS = 4212.1                   │
+│            latency │ min = 0.17, mean = 154.86, max = 732.27, StdDev = 81.28   │
+│ latency percentile │ p50 = 164.61, p75 = 205.57, p95 = 278.02, p99 = 378.62    │
+└────────────────────┴───────────────────────────────────────────────────────────┘
+
+status codes for scenario: jwt_auth_scenario
+┌────────────────┬────────┬─────────┐
+│    status code │ count  │ message │
+├────────────────┼────────┼─────────┤
+│ ok (no status) │ 505453 │         │
+│            200 │ 531292 │         │
+└────────────────┴────────┴─────────┘
+CPU
+webapi-1
+bf4a48b40752
+mongodbsession-webapi
+Running
+109.12%
+8080:8080⁠
+2 minutes ago
+
+
+
+───────────────────────────────────────────────────────────────────────────────── scenario stats ──────────────────────────────────────────────────────────────────────────────────
+
+scenario: redis_session_scenario
+  - ok count: 664912
+  - fail count: 0
+  - all data: 0 MB
+  - duration: 00:02:00
+
+load simulations:
+  - ramping_constant, copies: 1000, during: 00:01:00
+  - keep_constant, copies: 1000, during: 00:01:00
+
+┌────────────────────┬────────────────────────────────────────────────────────┐
+│               step │ ok stats                                               │
+├────────────────────┼────────────────────────────────────────────────────────┤
+│               name │ global information                                     │
+│      request count │ all = 664912, ok = 664912, RPS = 5540.9                │
+│            latency │ min = 1.3, mean = 134.99, max = 677.13, StdDev = 73.66 │
+│ latency percentile │ p50 = 144.9, p75 = 167.81, p95 = 239.36, p99 = 398.59  │
+│                    │                                                        │
+│               name │ redis_login                                            │
+│      request count │ all = 33736, ok = 33736, RPS = 281.1                   │
+│            latency │ min = 5, mean = 173.01, max = 454.18, StdDev = 74.41   │
+│ latency percentile │ p50 = 186.24, p75 = 221.18, p95 = 277.76, p99 = 347.39 │
+│                    │                                                        │
+│               name │ redis_profile                                          │
+│      request count │ all = 664912, ok = 664912, RPS = 5540.9                │
+│            latency │ min = 1.3, mean = 126.22, max = 354.26, StdDev = 57.8  │
+│ latency percentile │ p50 = 142.85, p75 = 164.99, p95 = 200.45, p99 = 260.74 │
+└────────────────────┴────────────────────────────────────────────────────────┘
+
+status codes for scenario: redis_session_scenario
+┌────────────────┬────────┬─────────┐
+│    status code │ count  │ message │
+├────────────────┼────────┼─────────┤
+│ ok (no status) │ 664912 │         │
+│            200 │ 698648 │         │
+└────────────────┴────────┴─────────┘
+CPU
+webapi-1
+bf4a48b40752
+mongodbsession-webapi
+Running
+123.16%
+8080:8080⁠
+5 minutes ago
+
+
+
+───────────────────────────────────────────────────────────────────────────────── scenario stats ──────────────────────────────────────────────────────────────────────────────────
+
+scenario: mongodb_session_scenario
+  - ok count: 170896
+  - fail count: 0
+  - all data: 0 MB
+  - duration: 00:02:00
+
+load simulations:
+  - ramping_constant, copies: 1000, during: 00:01:00
+  - keep_constant, copies: 1000, during: 00:01:00
+
+┌────────────────────┬────────────────────────────────────────────────────────────┐
+│               step │ ok stats                                                   │
+├────────────────────┼────────────────────────────────────────────────────────────┤
+│               name │ global information                                         │
+│      request count │ all = 170896, ok = 170896, RPS = 1424.1                    │
+│            latency │ min = 0.85, mean = 525, max = 2647.35, StdDev = 343.76     │
+│ latency percentile │ p50 = 610.3, p75 = 671.23, p95 = 921.09, p99 = 1929.22     │
+│                    │                                                            │
+│               name │ mongodb_login                                              │
+│      request count │ all = 9067, ok = 9067, RPS = 75.6                          │
+│            latency │ min = 11.71, mean = 861.09, max = 1786.99, StdDev = 459.69 │
+│ latency percentile │ p50 = 1040.9, p75 = 1235.97, p95 = 1370.11, p99 = 1628.16  │
+│                    │                                                            │
+│               name │ mongodb_profile                                            │
+│      request count │ all = 170896, ok = 170896, RPS = 1424.1                    │
+│            latency │ min = 0.85, mean = 479.6, max = 1229.12, StdDev = 244.35   │
+│ latency percentile │ p50 = 588.29, p75 = 665.6, p95 = 740.35, p99 = 972.29      │
+└────────────────────┴────────────────────────────────────────────────────────────┘
+
+status codes for scenario: mongodb_session_scenario
+┌────────────────┬────────┬─────────┐
+│    status code │ count  │ message │
+├────────────────┼────────┼─────────┤
+│ ok (no status) │ 170896 │         │
+│            200 │ 179963 │         │
+└────────────────┴────────┴─────────┘
+CPU
+webapi-1
+bf4a48b40752
+mongodbsession-webapi
+Running
+116.47%
+8080:8080⁠
+8 minutes ago
+
